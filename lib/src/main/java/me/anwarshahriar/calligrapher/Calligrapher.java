@@ -59,7 +59,8 @@ public class Calligrapher {
     private void traverseView(View view, Typeface typeface) {
         if (view instanceof ViewGroup) {
             ViewGroup viewGroup = (ViewGroup) view;
-            for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            int count = viewGroup.getChildCount();
+            for (int i = 0; i < count; i++) {
                 View v = viewGroup.getChildAt(i);
                 if (v instanceof TextView) {
                     ((TextView) v).setTypeface(typeface);
